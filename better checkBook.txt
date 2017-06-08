@@ -1,0 +1,45 @@
+import java.util.*;
+
+/*
+ * @autor Callan McGary 
+ * Stores; checkNumber, payee, amount and reason
+ */
+
+public class checkBook
+{
+    public class checkLog {
+    public String name;
+
+    public checkLog(String bookName){
+        name = bookName;
+    }
+    
+    public ArrayList<checkBook> register;
+        public checkLog()
+        {
+            register = new ArrayList<checkBook>();
+    }
+        public void addBook (checkBook newcheckBook)
+        {
+            register.add(newcheckBook);
+        }
+    }
+    
+    public ArrayList<Checks> checks;
+   
+  public checkBook()
+    {
+    checks = new ArrayList<Checks>();
+    }
+
+         public void addCheck (Checks newCheck)
+    {
+         checks.add(newCheck);
+        }
+        
+        public void printList() {
+            for(Checks check : checks) {
+                check.printCheck();
+            }
+    }
+}
